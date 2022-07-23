@@ -1,3 +1,4 @@
 .gradle/
 .idea/
 build/
+terraform/terraform.tfvars
