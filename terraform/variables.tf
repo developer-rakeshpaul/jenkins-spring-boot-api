@@ -1,10 +1,11 @@
 variable "name" {
   description = "the name of your stack, e.g. \"demo\""
+  default = "rp-aws-training"
 }
 
 variable "environment" {
   description = "the name of your environment, e.g. \"prod\""
-  default     = "prod"
+  default     = "test"
 }
 
 variable "region" {
@@ -28,13 +29,13 @@ variable "aws-secret-key" {
 
 variable "application-secrets" {
   description = "A map of secrets that is passed into the application. Formatted like ENV_VAR = VALUE"
-  type        = map
+  type        = map(string)
 }
 
 
 variable "availability_zones" {
   description = "a comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
-  default     = ["us-east-1"]
+  default     = ["us-east-1a","us-east-1b","us-east-1c","us-east-1d","us-east-1e","us-east-1f"]
 }
 
 variable "cidr" {
