@@ -2,3 +2,4 @@
 .idea/
 build/
 terraform/terraform.tfvars
+terraform/.terraform
